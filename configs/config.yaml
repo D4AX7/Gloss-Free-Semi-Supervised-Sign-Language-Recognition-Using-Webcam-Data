@@ -1,0 +1,51 @@
+paths:
+  raw_data: data/raw
+  labeled_data: data/labeled
+  unlabeled_data: data/unlabeled
+  models: models
+  logs: logs
+data:
+  frame_height: 224
+  frame_width: 224
+  frames_per_clip: 16
+  fps: 30
+  num_landmarks_hand: 21
+  num_landmarks_pose: 33
+  channels: 3
+model:
+  encoder_type: resnet18
+  hidden_dim: 512
+  num_heads: 8
+  num_transformer_layers: 4
+  dropout: 0.1
+  num_classes: 31
+training:
+  batch_size: 16
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  epochs: 10
+  warmup_epochs: 1
+  gradient_clip: 1.0
+  label_smoothing: 0.1
+  mixed_precision: true
+semi_supervised:
+  pseudo_label_threshold: 0.9
+  unlabeled_batch_ratio: 2
+  consistency_weight: 1.0
+  rampup_epochs: 10
+self_supervised:
+  enabled: false
+  pretrain_epochs: 20
+  temperature: 0.07
+  augmentation_strength: 0.5
+inference:
+  sliding_window_stride: 4
+  confidence_threshold: 0.7
+  smoothing_window: 3
+export:
+  onnx_opset_version: 14
+  quantization_backend: qnnpack
+logging:
+  tensorboard: true
+  log_interval: 10
+  checkpoint_interval: 5
