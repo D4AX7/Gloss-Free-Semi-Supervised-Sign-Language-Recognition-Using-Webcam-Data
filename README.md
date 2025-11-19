@@ -230,8 +230,8 @@ python src/train.py --resume models/checkpoint.pth
 ## 📚 Dataset
 
 This project uses the **ASL Alphabet** dataset:
-- **Source**: [Kaggle - ASL Alphabet](https://www.kaggle.com/datasets/grassknoted/asl-alphabet)
-- **Size**: 87,000 images (26 letters + 4 phrases)
+- **Source**:https://data.mendeley.com/datasets/8fmvr9m98w/3
+- **Size**: 10,000 images (26 letters + 4 phrases)
 - **License**: CC0 Public Domain
 - **Processing**: Converted to sequential frames with augmentation
 
@@ -250,7 +250,7 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 
 ## 🙏 Acknowledgments
 
-- **ASL Alphabet Dataset** by grassknoted on Kaggle
+- **ASL Alphabet Dataset** by Meadley
 - **MediaPipe** by Google for hand landmark extraction
 - **PyTorch** team for the deep learning framework
 - Sign language research community
