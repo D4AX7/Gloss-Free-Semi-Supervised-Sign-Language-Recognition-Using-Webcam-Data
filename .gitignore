@@ -39,10 +39,11 @@ venv.bak/
 
 # Data
 data/raw/*
+data/raw/**/*
 !data/raw/.gitkeep
 data/labeled/*
-!data/labeled/.gitkeep
 data/labeled_new/*
+!data/labeled/.gitkeep
 !data/labeled_new/.gitkeep
 data/unlabeled/*
 !data/unlabeled/.gitkeep
